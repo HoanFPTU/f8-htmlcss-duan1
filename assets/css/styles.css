@@ -1,0 +1,600 @@
+* {
+  box-sizing: border-box;
+}
+/* root giống html thôi */
+:root {
+  --primary-color: #0f1b4c;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Poppins;
+}
+/* Common (dùng chung) */
+a {
+  text-decoration: none;
+}
+.content {
+  width: 1110px;
+  /* max 100% để lui vào nó chạy theo */
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  display: inline-block;
+  min-width: 98px;
+  padding: 18px 16px;
+  background: var(--primary-color);
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #ffffff;
+}
+/* line  clamp dùng để hiện 3 chấm khi đoạn văn quá dài */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+/* header */
+.header {
+  background-color: #e6f0ff;
+  height: 100vh;
+  position: relative;
+  /* display: none; */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 38px;
+}
+.navbar ul {
+  display: flex;
+  margin-left: 50px;
+}
+
+.navbar .actions {
+  display: flex;
+  margin-left: auto;
+}
+.navbar ul a {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #4f5361;
+  padding: 8px 14px;
+}
+.navbar ul a:hover {
+  text-decoration: underline;
+}
+.navbar .action-link {
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.navbar .action-btn {
+  padding: 13px 16px;
+  margin-left: 18px;
+  border-radius: 8px;
+}
+.hero {
+  margin-top: 130px;
+}
+.hero .info {
+  width: 51%;
+}
+.hero .sub-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5;
+
+  letter-spacing: 0.01em;
+  color: #687691;
+}
+.hero .title {
+  font-weight: 700;
+  font-size: 6.2rem;
+  line-height: 1.1875;
+  /* or 119% */
+
+  color: #000336;
+}
+.hero .desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.78;
+
+  color: #5a6473;
+  margin-top: 30px;
+}
+
+.hero-cta {
+  min-width: 170px;
+  margin-top: 40px;
+}
+.img-hero {
+  position: absolute;
+  bottom: 0;
+  right: calc((100vw - 1110px) / 2);
+}
+
+/* Cilents */
+.cilents {
+  padding: 43px 0 64px;
+  margin-top: 79px;
+
+  /* display: none; */
+}
+.cilents .row {
+  display: flex;
+  justify-content: space-between;
+}
+.cilents-desc {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  /* identical to box height, or 125% */
+
+  color: #7d8589;
+}
+.cilents .row-desc {
+  margin-top: 23px;
+}
+.cilents .images {
+  margin-top: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Guides */
+.guides {
+  margin-top: 40px;
+  padding: 93px 0 79px;
+}
+.guides .sub-title {
+  font-weight: 600;
+  position: relative;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  /* or 100% */
+
+  text-align: center;
+
+  color: #000339;
+}
+.guides .sub-title::before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+.guides .desc {
+  max-width: 100%;
+  width: 459px;
+  margin: 20px auto 0;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+
+  text-align: center;
+
+  color: #5a6473;
+}
+.list-guide {
+  display: flex;
+  justify-content: center;
+}
+.guide-item {
+  margin: 0 70px;
+  text-align: center;
+}
+.list-guide .title {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #3b3c45;
+  margin-top: 26px;
+}
+.list-guide .link {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #0689ff;
+  margin-top: 10px;
+}
+.list-guide .arrow {
+  margin-left: 8px;
+}
+.guide-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.guide-cta .btn {
+  /* min width ddeer nos k bị nhỏ quá á */
+  min-width: 170px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.54;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Featured */
+.featured {
+  background: #f5fafe;
+  padding: 110px 0px;
+  margin-top: 40px;
+}
+.featured .content {
+}
+.featured header > .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  /* identical to box height, or 100% */
+
+  color: #000339;
+}
+.featured .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.featured .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+
+  color: #5a6473;
+}
+.featured .link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  /* identical to box height */
+  text-align: right;
+  color: #0689ff;
+}
+.featured .link .arrow {
+  margin-left: 8px;
+}
+.featured-items {
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+}
+.featured .items {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  padding-bottom: 7px;
+}
+.items a > img {
+  width: 100%;
+  height: 227px;
+  border-radius: 12px 12px 0px 0px;
+  object-fit: cover;
+}
+.items .body {
+  padding: 17px 38px 24px 20px;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}
+.items .body .sub-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5;
+  /* identical to box height, or 100% */
+}
+.items .body .desc {
+  --line-clamp--: 3;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  /* identical to box height */
+  color: #a3a6ab;
+  margin-top: 11px;
+}
+.items .body .info {
+  display: flex;
+  align-items: center;
+}
+
+.items .body .label {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #4d4d52;
+  margin-left: 9px;
+}
+
+.items .info img {
+  margin-left: 20px;
+}
+.items .info img:first-child {
+  margin-left: 0px;
+}
+
+/* ----Stats---- */
+.stats {
+  margin-top: 75px;
+  padding: 50px 0px;
+}
+.stats .content {
+  width: 1048px;
+}
+.stats .row {
+  display: flex;
+}
+.stats .img-block,
+.stats .info {
+  width: 50%;
+}
+.stats .img-block {
+  position: relative;
+}
+
+.stats .img-block .image {
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+  /* object-fit để lấp đầy cái ảnh và k bị méo ảnh */
+  display: block;
+  /* phải là block thì mới ml được */
+  margin-left: auto;
+}
+.stats .stats-trend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 239px;
+  padding: 45px 22px 40px;
+  box-shadow: 90px 85px 100px rgba(0, 0, 0, 0.4);
+  border-radius: 12px 0px 12px 12px;
+  border: 0.1px solid rgba(0, 0, 255, 0.1);
+}
+.stats-trend .value {
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 0.01em;
+
+  color: #000339;
+}
+.stats-trend .icon {
+  margin-left: auto;
+  /* do là thẻ cha của nó display = flex rồi nên thẻ con ko cần block nữa */
+}
+.stats-trend .separate {
+  height: 1.2px;
+  background-color: #e9e9e9;
+  margin-top: 26px;
+}
+.stats-trend .desc {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  /* or 150% */
+
+  color: #a7a7a7;
+}
+.stats .info {
+  padding: 79px 0 0 165px;
+}
+.stats .info .sub-title {
+  position: relative;
+  width: 269px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.29;
+  /* or 129% */
+
+  color: #000339;
+}
+/* phải set position cho before để nó ko bị va đập các phần tử xquanh */
+.stats .info .sub-title::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: "";
+  display: block;
+  width: 41px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+.stats .info .desc {
+  margin-top: 20px;
+  width: 309px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+
+  color: #5a6473;
+}
+.stats .avatar-block {
+  margin-top: 26px;
+  display: flex;
+  gap: 16px 14px;
+  flex-wrap: wrap;
+}
+.stats .avatar-group {
+  display: flex;
+}
+
+.stats .avatar {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  margin-left: -3px;
+  border-radius: 50%;
+}
+.stats .avatar:first-of-type {
+  margin-left: 0;
+}
+
+.stats .qtyblock .content-number {
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #000000;
+}
+.stats .qtyblock .content-desc {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 27px;
+  /* identical to box height */
+
+  color: #7b8087;
+  margin-top: 24px;
+}
+.stats .row-qty {
+  margin-top: 110px;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+/* subscription */
+.subscription {
+  margin-top: 90px;
+  padding-bottom: 55px;
+}
+.subscription .body {
+  display: flex;
+  height: 370px;
+  background: #063183;
+  border-radius: 20px;
+  align-items: center;
+  position: relative;
+}
+.subscription .info {
+  padding: 0px 90px 0px 80px;
+  width: 671px;
+  max-width: 100%;
+}
+.subscription .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.5;
+
+  color: #ffffff;
+}
+.subscription .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+
+  color: #ffffff;
+
+  opacity: 0.75;
+  margin-top: 15px;
+}
+.subscription .btn {
+  min-width: 151px;
+  background: #ffffff;
+  color: #002366;
+  margin-top: 20px;
+}
+.subscription .image {
+  position: absolute;
+  bottom: 0;
+  right: 221px;
+}
+/* Footer */
+.footer {
+  margin-top: 55px;
+  padding: 50px 58px;
+}
+.footer .row {
+  display: flex;
+}
+.footer .row-top {
+  gap: 185px;
+}
+.footer .heading {
+  font-family: "Lato", sans-serif;
+
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #1c1c1d;
+}
+.footer .list,
+.footer .desc {
+  margin-top: 42px;
+}
+.footer .list .item {
+  margin-top: 18px;
+}
+/* bị collap do cái kia bự hơn nên ko lo first-child */
+.footer .item a,
+.footer .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+
+  color: #7a7a7e;
+  white-space: nowrap;
+  /* Cho thẻ a ko xuống hàng */
+}
+.footer .desc {
+  white-space: normal;
+  line-height: 1.75;
+}
+.footer .social {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+}
+.footer .social .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+}
+.footer .social .social-link:hover {
+  background-color: #ebebeb;
+}
+.footer .row-bottom {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 81px;
+}
+.footer .row-bottom .copyright {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #c2c2c2;
+}
